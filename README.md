@@ -8,6 +8,7 @@ Pošto Hrvatska nema svoj API za prirez, odlučio sam napraviti svoj.
 
 ### How to use
 
+#### Javascript(ES6)
 ``` javascript
 fetch('prirez.json')
 .then((response)=>{
@@ -15,4 +16,22 @@ fetch('prirez.json')
 }).then((json)=>{
   return json.prirez;
 })
+```
+#### jQuery
+``` javascript 
+$.getJSON('prirez.json', function(data){
+  return data;
+});
+```
+#### Javascript(ES5)
+``` javascript 
+var xmlhttp = new XMLHttpRequest(),
+  method = 'GET',
+  url = 'https://developer.mozilla.org/';
+
+xmlhttp.open(method, url, true);
+xmlhttp.onload = function () {
+  return xmlhttp.response;
+};
+xmlhttp.send();
 ```
